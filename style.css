@@ -1,0 +1,232 @@
+/* CSS Variables */
+:root {
+    /* Colors */
+    --background-color: #fafafa;
+    --primary-color: #B5CACA; 
+    --secondary-color: #402A18; 
+    --text-color: #333;
+    --footer-link-color: #fff;
+    --highlight-color: green;
+
+    /* Spacing and Layout */
+    --padding-small: 10px;
+    --padding-medium: 15px;
+    --padding-large: 20px;
+    --margin-medium: 20px;
+    --border-radius: 8px;
+
+    /* Font and Sizes */
+    --font-family: Arial, sans-serif;
+    --font-size-small: 0.9em;
+    --font-size-medium: 1em;
+    --font-size-large: 1.2em;
+    --logo-height: 105px;
+    --banner-max-height: none;
+}
+
+/* General Resets and Base Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Wrapper for Sticky Footer */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.push {
+    flex-grow: 1;
+}
+
+/* Header Styling */
+header {
+    background-color: var(--primary-color);
+    color: var(--footer-link-color);
+    padding: var(--padding-small) var(--padding-large);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+header .logo {
+    height: var(--logo-height);
+}
+
+.nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: var(--padding-large);
+    margin: 0;
+    padding: 0;
+}
+
+header ul li a {
+    color: var(--footer-link-color);
+    text-decoration: none;
+    font-size: var(--font-size-medium);
+    font-weight: bold;
+}
+
+header ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--primary-color);
+    color: var(--footer-link-color);
+    text-align: center;
+    padding: var(--padding-small);
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+footer a {
+    color: var(--footer-link-color);
+    text-decoration: none;
+}
+
+/* Banner Image Styling */
+#banner img {
+    width: 100%;
+    max-height: var(--banner-max-height);
+    object-fit: cover;
+    border-radius: 0;
+}
+
+/* About Page */
+#aboutContent section {
+    margin-bottom: var(--margin-medium);
+    padding: var(--padding-large);
+    background-color: #f4f4f4;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+#aboutContent img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-top: var(--padding-medium);
+}
+
+/* Menu Page */
+#menuItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--padding-large);
+}
+
+.menu-category {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: var(--padding-large);
+}
+
+.menu-category h2 {
+    font-size: 1.8em;
+    color: var(--text-color);
+    margin-bottom: var(--margin-medium);
+}
+
+.menu-item {
+    display: flex;
+    margin-bottom: var(--margin-medium);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.menu-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-right: 1px solid #ddd;
+}
+
+.item-details {
+    padding: var(--padding-medium);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-details h3 {
+    margin: 0;
+    color: var(--text-color);
+    font-size: var(--font-size-large);
+}
+
+.item-details p {
+    margin-top: var(--padding-small);
+    color: #666;
+}
+
+/* Contact Page */
+#branchInfo .branch {
+    padding: var(--padding-medium);
+    margin: var(--padding-medium);
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    background-color: #f9f9f9;
+}
+
+#branchInfo .branch h3 {
+    margin-top: 0;
+    color: var(--text-color);
+    font-size: var(--font-size-large);
+}
+
+#contactForm input, #contactForm textarea {
+    width: 100%;
+    padding: var(--padding-small);
+    margin: var(--padding-small) 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#contactForm button {
+    padding: var(--padding-small) var(--padding-large);
+    background-color: var(--primary-color);
+    color: var(--footer-link-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contactForm button:hover {
+    background-color: #3e2525;
+}
+
+#messageSent {
+    color: var(--highlight-color);
+    font-weight: bold;
+    margin-top: var(--padding-small);
+}

@@ -44,7 +44,7 @@
         </item>
         <item id="11" name="Bottled Water" price="2.00">
             <description>Pure bottled water to keep you hydrated.</description>
-            <img>jpg/bottled_water.jpg</img> 
+            <image>jpg/bottled_water.jpg</image> 
         </item>
     </category>
 </menu>
